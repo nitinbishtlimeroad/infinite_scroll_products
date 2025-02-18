@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  upid: MyString
+  brand: MyString
+  name: MyString
+  filidn: MyString
+  selling_price: 1
+  price: 1
+
+two:
+  upid: MyString
+  brand: MyString
+  name: MyString
+  filidn: MyString
+  selling_price: 1
+  price: 1
