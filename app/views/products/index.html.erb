@@ -5,11 +5,15 @@
     <%= render @products %>
   </div>
 
-  <input type="hidden" id="offset" value="8"> <!-- Start from 8 since 8 products are initially loaded -->
-  <div id="loading" style="display: none;">
+  <% pgid = params[:pgid].to_i %>
+  <% pgid = 1 if pgid < 1 %>
+  <input type="hidden" id="offset" value="<%= (pgid - 1) * 8 + @products.count %>"> 
+
+  <div id="loading" style="display: none; text-align: center;">
     <div class="loading-spinner"></div>
     Loading more products...
   </div>
+
   <div id="no-more-products" style="display: none; text-align: center; margin-top: 20px; color: #555;">
     No more products to load.
   </div>
