@@ -1,20 +1,11 @@
 <div class="container">
   <h1 style="text-align: center; margin-bottom: 20px;">Product Listing</h1>
-  
+
   <div id="product-container" class="grid">
-    <% @products.each do |product| %>
-      <div class="product-card">
-        <img src="https://n-img3.junaroad.com/uiproducts/<%= product.upid %>/zoom_0-<%= product.fileidn %>.jpg" alt="<%= product.name %>" class="product-image">
-        <div class="product-details">
-          <p class="product-brand"><%= product.brand %></p>
-          <p class="product-title"><%= product.name %></p>
-          <p class="product-price">₹<%= product.selling_price %> <del>₹<%= product.price %></del></p>
-        </div>
-      </div>
-    <% end %>
+    <%= render @products %>
   </div>
 
-  <input type="hidden" id="offset" value="0"> <!-- Tracks the offset for pagination -->
+  <input type="hidden" id="offset" value="8"> <!-- Start from 8 since 8 products are initially loaded -->
   <div id="loading" style="display: none;">
     <div class="loading-spinner"></div>
     Loading more products...
@@ -23,4 +14,5 @@
     No more products to load.
   </div>
 </div>
+
 <%= javascript_include_tag "infinite_scroll", defer: true %>
