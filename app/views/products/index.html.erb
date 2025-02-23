@@ -14,6 +14,13 @@
     <% end %>
   </div>
 
-  <div id="loading" style="display: none;">Loading more products...</div>
-  <input type="hidden" id="offset" value="8">
+  <input type="hidden" id="offset" value="0"> <!-- Tracks the offset for pagination -->
+  <div id="loading" style="display: none;">
+    <div class="loading-spinner"></div>
+    Loading more products...
+  </div>
+  <div id="no-more-products" style="display: none; text-align: center; margin-top: 20px; color: #555;">
+    No more products to load.
+  </div>
 </div>
+<%= javascript_include_tag "infinite_scroll", defer: true %>
