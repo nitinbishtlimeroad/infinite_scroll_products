@@ -1,0 +1,49 @@
+/* Welcome Page Styling */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to right, #2acd15, #16c90c);
+    color: white;
+    padding: 20px;
+  }
+  
+  .welcome-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .welcome-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Primary Button */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-primary i {
+    margin-right: 8px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff4f4f;
+    transform: scale(1.05);
+  }
+  
